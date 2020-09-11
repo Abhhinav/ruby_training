@@ -18,8 +18,8 @@ $hash = {
     ],
     groups: [
         {id: 1, title: "RoR", people: 5},
-        {id: 2, title: "Scala", people: 7},
-        {id: 3, title: ".Net", people: 11},
+        {id: 2, title: "Scala", people: 5},
+        {id: 3, title: ".Net", people: 3},
         {id: 4, title: "RoR", people: 9},
         {id: 5, title: "RoR", people: 3}
 
@@ -92,4 +92,8 @@ $hash = {
   
   puts "Find group for RoR"
     groups = Group.find_by_title("RoR")
+    p groups
+
+    puts "Find group for 5 people"
+    groups = Group.find_by_people(5)
     p groups
