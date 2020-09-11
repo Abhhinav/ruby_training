@@ -29,3 +29,4 @@ mumbai.add_snack("Pepsi")
 #p mumbai.select { |snack| snack.downcase.include?("v")}
 numbers = [5,8,10,9,3,0,4,1,7,2]
 p numbers.sort{|a,b| b <=> a}
+p numbers.max{|a,b| a<=>b}

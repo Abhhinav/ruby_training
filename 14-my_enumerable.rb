@@ -22,4 +22,15 @@ module MyEnumerable
     end
     results
     end
+
+    def max (num1,num2)
+        result_max =0
+        each do |index|
+        if num1>num2
+            num1,num2 = num2,num1
+            results = num1
+        end
+        end
+        result_max
+        end   
 end
