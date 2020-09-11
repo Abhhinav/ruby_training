@@ -14,7 +14,15 @@ $hash = {
       { id: 1, title: "Project 1", owner: "rajesh"},
       { id: 2, title: "Project 2", owner: "rajesh"},
       { id: 3, title: "Project 3", owner: "urvashi"},
-      { id: 4, title: "Project 4", owner: "radhika"},
+      { id: 4, title: "Project 4", owner: "radhika"}
+    ],
+    groups: [
+        {id: 1, title: "RoR", people: 5},
+        {id: 2, title: "Scala", people: 7},
+        {id: 3, title: ".Net", people: 11},
+        {id: 4, title: "RoR", people: 9},
+        {id: 5, title: "RoR", people: 3}
+
     ]
   }
   class Model
@@ -59,6 +67,9 @@ $hash = {
     class Project < Model
         connect
     end  
+    class Group < Model
+        connect
+    end 
   puts "Find User by id : 2"
   user1 = User.find_by_id(2)
   p user1
@@ -79,3 +90,6 @@ $hash = {
   projects = Project.find_by_owner("rajesh")
   p projects
   
+  puts "Find group for RoR"
+    groups = Group.find_by_title("RoR")
+    p groups
