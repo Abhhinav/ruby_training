@@ -32,5 +32,16 @@ module MyEnumerable
         end
         end
         result_max
-        end   
+    end  
+    
+    def min (num1,num2)
+        result_min =10
+        each do |index|
+        if num1>num2
+            num1,num2 = num2,num1
+            results = num2
+        end
+        end
+        result_min
+    end   
 end
