@@ -35,7 +35,7 @@ $hash = {
         #p to_s.downcase.pluralize
         class_name = to_s.downcase.pluralize
         @data = $hash[:"#{class_name}"]
-        p @data
+        #p @data
     end
     def self.data
         @data
