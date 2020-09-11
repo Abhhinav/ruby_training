@@ -11,4 +11,15 @@ module MyEnumerable
         end
      result
     end
+
+    def sort(num1,num2)
+    results =[]
+    each do |index|
+    if num1<num2
+        num1,num2 = num2,num1
+        results << num1+num2
+    end
+    end
+    results
+    end
 end
