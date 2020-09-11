@@ -43,5 +43,12 @@ module MyEnumerable
         end
         end
         result_min
-    end   
+    end  
+    def zip(arr)
+    result_zip = []
+    each do |index|
+        result_zip << arr[index]
+    end
+    result_zip
+    end 
 end
